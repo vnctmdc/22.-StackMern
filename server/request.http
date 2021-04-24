@@ -1,0 +1,52 @@
+
+# Register by username and password
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+    "username": "henry",
+    "password": "henry"
+}
+
+
+### Login by username and password
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+    "username": "henry",
+    "password": "henry"
+}
+
+### Add Post by user
+POST http://localhost:5000/api/post
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MDc0ZDU2YmU3NmJlMzAxMTQyODk4YTgiLCJpYXQiOjE2MTkyNzA3MTB9.hvkdDY7ZCxvUfx0Pre39dbVfcCgz4MLSh4hqouG4JsI
+
+{
+    "title": "Clean Code",
+    "description": "Kỹ thuật thôi mà",
+    "url": "react.com",
+    "status": "LEARNED"
+}
+
+### Get Posts by user
+GET http://localhost:5000/api/post
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MDc0ZDU2YmU3NmJlMzAxMTQyODk4YTgiLCJpYXQiOjE2MTg2Nzg2Mjh9.YwVT-zMir2l1MEYPjOFUiGhPgEzu9ET8Ka_B1Z0xJhQ
+
+
+### Put Edit Posts by id
+PUT http://localhost:5000/api/post/60841c9c211f9a20b434339e
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MDc0ZDU2YmU3NmJlMzAxMTQyODk4YTgiLCJpYXQiOjE2MTkyODUwOTR9.twNTvFhvKg9U_i8SbwU8fhKCtM0S-H3K_db7Q64L09U
+
+{
+    "title": "CSharp",
+    "description": "CSharp description",
+    "url": "Aboucsharp.com",
+    "status": "LEARNING"
+}
+
+### Delete Post by id
+DELETE http://localhost:5000/api/post/60841c77211f9a20b434339d
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MDc0ZDU2YmU3NmJlMzAxMTQyODk4YTgiLCJpYXQiOjE2MTkyODUwOTR9.twNTvFhvKg9U_i8SbwU8fhKCtM0S-H3K_db7Q64L09U
